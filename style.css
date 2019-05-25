@@ -8,6 +8,7 @@ body{
     padding-top:2px;
     padding-bottom:2px;
     padding-left: 10px;
+
 }
 
 .content{
@@ -15,15 +16,20 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 .content_title{
     width: 100%;
+    font-weight:bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .no{
     display: inline-block;
     width: 15%;
+    padding-left: 10px;
 }
 .unit{
     display: inline-block;
@@ -46,9 +52,19 @@ body{
     width: 100%;
 }
 
+.list{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #E6E6FA;
+    border-radius: 15px;
+}
+
 .FileNo_{
     display: inline-block;
     width: 15%;
+    padding-left: 10px;
 }
 
 .UnitName_{
