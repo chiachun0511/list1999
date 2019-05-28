@@ -983,15 +983,22 @@ data=[
 
 
    data.forEach(function(x){
-    document.getElementById('FileNo_').innerHTML += 
-      '<div id= "list">' 
-          + '<div id= "FileNo_">' + x.FileNo_ + '</div>'
-          + '<div id= "Zipname_">' + x.ZipName_ + '</div>' 
-          + '<div id="BeforeDesc_">' + x.BeforeDesc_ + '</div>'
-          + '<div id="Save_Date_">' + x.Save_Date_ + '</div>'
+    document.getElementById('content_list').innerHTML += 
+      '<div class="list">' 
+          + '<div class="FileNo_">' + x.FileNo_ + '</div>'
+          + '<div class="ZipName_">' + x.UnitName_ + '</div>' 
+          + '<div class="ZipName_">' + x.ZipName_ + '</div>' 
+          + '<div class="BeforeDesc_">' + x.BeforeDesc_ + '</div>'
+          + '<div class="Save_Date_">' + x.Save_Date_ + '</div>'
       '</div>' ;
   })
 
+
+  // 從 data 裡拿出每一個：
+  //   讓 id="content_list" 的 HTML 裡面加上: 
+  //       開一個 div.list
+  //       每一個的案號放在 div.list 下的 div.fileno
+  //       每一個的行政區放在 div.list 下的 div.zipname
 
 
   // + '<div class="UnitName_">' + x.UnitName_ + '</div>'
