@@ -65,26 +65,31 @@ body{
     display: inline-block;
     width: 15%;
     padding-left: 10px;
+    vertical-align: middle;
 }
 
 .UnitName_{
     display: inline-block;
     width: 10%;
+    vertical-align: middle;
 }
 
 .ZipName_{
     display: inline-block;
     width: 10%;
+    vertical-align: middle;
 }
 
 .BeforeDesc_{
     display: inline-block;
     width: 40%;
+    vertical-align: middle;
 }
 
 .Save_Date_{
     display: inline-block;
     width: 15%;
+    vertical-align: middle;
 }
 
 
