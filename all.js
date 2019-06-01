@@ -986,13 +986,14 @@ data=[
     document.getElementById('content_list').innerHTML += 
       '<div class="list">' 
           + '<div class="FileNo_">' + x.FileNo_ + '</div>'
-          + '<div class="ZipName_">' + x.UnitName_ + '</div>' 
+          + '<div class="UnitName_">' + x.UnitName_ + '</div>' 
           + '<div class="ZipName_">' + x.ZipName_ + '</div>' 
           + '<div class="BeforeDesc_">' + x.BeforeDesc_ + '</div>'
           + '<div class="Save_Date_">' + x.Save_Date_ + '</div>'
       '</div>' ;
+      
+     
   })
-
 
   // 從 data 裡拿出每一個：
   //   讓 id="content_list" 的 HTML 裡面加上: 
@@ -1001,20 +1002,43 @@ data=[
   //       每一個的行政區放在 div.list 下的 div.zipname
 
 
-  // + '<div class="UnitName_">' + x.UnitName_ + '</div>'
-  // + '<div class="ZipName_">' + x.ZipName_ + '</div>'
-  // + '<div class="BeforeDesc_">' + x.BeforeDesc_ + '</div>'
-  // + '<div class="Save_Date_">' + x.Save_Date_ + '</div>'
-  // , 'UnitName_', 'ZipName_', 'BeforeDesc_', 'Save_Date_'
-// document.getElementById('FileNo_').innerHTML += data.forEach(function(x){
-//   document.getElementById('list').innerHTML += '<div>'+'<br>' + x.FileNo_ + '</div>'  ;
-// })
 
 
-// { <div id="list">
-//                 <div id= "FileNo_"></div>
-//                 <div id= "UnitName_">養工處</div>
-//                 <div id= "ZipName_">鼓山區</div>
-//                 <div id= "BeforeDesc_">渠反映該處有一盞路燈故障不亮，建請查處。</div>
-//                 <div id= "Save_Date_">2019/5/25 下午 09:42:44</div>
-//             </div> }
+  // let count ={
+  //   "左營區" : 0,
+  //   "楠梓區" : 0 
+  // }
+
+  // data.forEach(function(x){
+  //   // console.log(x.ZipNname_)
+  //   if(x.ZipName_==="楠梓區"){
+  //     count.楠梓區 = count.楠梓區 +1;
+  //   }else if(x.ZipName_==="左營區")
+  //   {
+  //     count.左營區 = count.左營區 +1;
+  //   }
+  // })
+  // console.log(count.楠梓區);
+  // console.log(count.左營區);
+
+
+  // data.forEach(function(x){
+  //   // console.log(x.ZipNname_)
+  //   if(x.ZipName_==="左營區"){
+  //     count.左營區 = count.左營區 +1;
+  //   }
+  // })
+  // console.log(count.左營區);
+
+
+  let count={
+  }
+  data.forEach(function(x){
+    if(count[x.ZipName_]===undefined){
+      count[x.ZipName_]=1;
+    }else{
+      count[x.ZipName_] = count[x.ZipName_] +1;
+    }
+  })
+  console.log(count);
+
