@@ -1031,14 +1031,29 @@ data=[
   // console.log(count.左營區);
 
 
+  // let count={
+  // }
+  // data.forEach(function(x){
+  //   if(count[x.ZipName_]===undefined){
+  //     count[x.ZipName_]=1;
+  //   }else{
+  //     count[x.ZipName_] = count[x.ZipName_] +1;
+  //   }
+  // })
+  // console.log(count);
+
   let count={
   }
   data.forEach(function(x){
-    if(count[x.ZipName_]===undefined){
-      count[x.ZipName_]=1;
-    }else{
-      count[x.ZipName_] = count[x.ZipName_] +1;
+    if(count[x.ZipName_] === undefined){
+      count[x.ZipName_]=0;
+      if(x.StatusName_=== "處理完成"){
+        count[x.ZipName_] = count[x.ZipName_] +1;
+      }
+    }else {
+      if(x.StatusName_ === "處理完成"){
+        count[x.ZipName_] = count[x.ZipName_] +1;
+      }
     }
   })
   console.log(count);
-
