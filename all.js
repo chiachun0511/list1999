@@ -991,8 +991,6 @@ data=[
           + '<div class="BeforeDesc_">' + x.BeforeDesc_ + '</div>'
           + '<div class="Save_Date_">' + x.Save_Date_ + '</div>'
       '</div>' ;
-      
-     
   })
 
   // 從 data 裡拿出每一個：
@@ -1000,6 +998,22 @@ data=[
   //       開一個 div.list
   //       每一個的案號放在 div.list 下的 div.fileno
   //       每一個的行政區放在 div.list 下的 div.zipname
+
+  // data.forEach(function(x){
+  //   document.getElementById('filter').innerHTML += 
+
+  // })
+
+  let zip=[];
+  let i =1;
+
+    data.forEach(function(x){
+      if(zip[x.ZipName_] === undefined){
+        zip[i] = zip[i-1] + zip[x.ZipName_];
+        document.getElementById('filter').innerHTML +=
+      '<div id="zipname">' + x.ZipName_+ '</div>';
+      }
+    })
 
 
 
@@ -1041,6 +1055,9 @@ data=[
   //   }
   // })
   // console.log(count);
+
+
+
 
   let count={
   }
