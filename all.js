@@ -1012,19 +1012,44 @@ data.forEach(function (x) {
   }
 });
 uniq = [...new Set(arr)];
-console.log(uniq);
-
 
 uniq.forEach(function (x) {
   document.getElementById('filter').innerHTML +=
     '<div class="zipname">' + x + '</div>';
 });
 
+// document.querySelectorAll('.zipname').forEach(function(x){
+//   x.onclick=function(){
+//     console.log(x.innerText);
+//   }
+// });
+
 document.querySelectorAll('.zipname').forEach(function(x){
   x.onclick=function(){
-    console.log(x.innerText);
+    document.getElementById('content_list').innerHTML ="";
+   
+    data.forEach(function(y){
+      if(y.ZipName_= x.value){
+        document.getElementById('content_list').innerHTML +=
+        '<div class="list">'
+        + '<div class="FileNo_">' + y.FileNo_ + '</div>'
+        + '<div class="UnitName_">' + y.UnitName_ + '</div>'
+        + '<div class="ZipName_">' + y.ZipName_ + '</div>'
+        + '<div class="BeforeDesc_">' + y.BeforeDesc_ + '</div>'
+        + '<div class="Save_Date_">' + y.Save_Date_ + '</div>'
+        '</div>';
+      }
+    })
+
   }
-});
+})
+
+
+
+
+
+
+
 
 
 
@@ -1072,18 +1097,18 @@ document.querySelectorAll('.zipname').forEach(function(x){
 
 
 
-let count = {
-}
-data.forEach(function (x) {
-  if (count[x.ZipName_] === undefined) {
-    count[x.ZipName_] = 0;
-    if (x.StatusName_ === "處理完成") {
-      count[x.ZipName_] = count[x.ZipName_] + 1;
-    }
-  } else {
-    if (x.StatusName_ === "處理完成") {
-      count[x.ZipName_] = count[x.ZipName_] + 1;
-    }
-  }
-})
-console.log(count);
+// let count = {
+// }
+// data.forEach(function (x) {
+//   if (count[x.ZipName_] === undefined) {
+//     count[x.ZipName_] = 0;
+//     if (x.StatusName_ === "處理完成") {
+//       count[x.ZipName_] = count[x.ZipName_] + 1;
+//     }
+//   } else {
+//     if (x.StatusName_ === "處理完成") {
+//       count[x.ZipName_] = count[x.ZipName_] + 1;
+//     }
+//   }
+// })
+// console.log(count);
