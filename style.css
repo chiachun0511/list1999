@@ -32,6 +32,10 @@ body{
     padding-left: 10px;
     border-right: solid;
     border-color: white;
+    cursor: pointer;
+}
+.zipname:hover{
+    color: #FFD700;
 }
 
 .content_title{
@@ -74,6 +78,10 @@ body{
     padding-bottom: 20px;
     background-color: #E6E6FA;
     border-radius: 15px;
+}
+
+.list:hover{
+    background: #F5F5DC;
 }
 
 .FileNo_{
