@@ -1029,7 +1029,7 @@ document.querySelectorAll('.zipname').forEach(function(x){
     document.getElementById('content_list').innerHTML ="";
    
     data.forEach(function(y){
-      if(y.ZipName_= x.value){
+      if(y.ZipName_=== x.innerText){
         document.getElementById('content_list').innerHTML +=
         '<div class="list">'
         + '<div class="FileNo_">' + y.FileNo_ + '</div>'
